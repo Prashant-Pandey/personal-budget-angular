@@ -7,11 +7,6 @@ const port = 3000;
 
 app.use(cors())
 
-
-app.use('/', express.static('./public'))
-app.get('/hello', (req, res) => {
-    res.send('world');
-});
 app.get('/budget', (req, res) => {
     res.json(budget);
 });
