@@ -1,3 +1,22 @@
-title{
-  display: block;
+p{
+  width: 60ch;
+  text-align: justify;
+}
+
+
+
+article.text-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  article.text-box {
+      margin: 10px;
+  }
 }

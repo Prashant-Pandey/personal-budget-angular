@@ -1,0 +1,14 @@
+
+.hidden-visibility {
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: -1000px;
+}
+
+.hidden-visibility:focus{
+  left: 10px;
+  font-size: 1.4em;
+  color: azure;
+  padding: 1em;
+}

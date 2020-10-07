@@ -1,0 +1,25 @@
+section.hero {
+  height: 350px;
+  background-color: #b4c6f0;
+  background-image: url('../../assets/bg.png');
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-top: 40px;
+}
+
+section.hero h1, section.hero h2 {
+  text-align: center;
+  margin: 0;
+}
+
+section.hero h1 a{
+  color: #fff;
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+section.hero h2 {
+  color: #4d5791;
+}
