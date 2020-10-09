@@ -16,18 +16,19 @@ export class DataService {
     labels: []
   };
   public d3JSData = [];
+  private budgetData;
   budgetURL = 'http://localhost:3000/budget';
   constructor(private http: HttpClient) {
   }
 
   private async getBudgetData() {
-    return await this.http.get<BudgetDataModel>(this.budgetURL).toPromise();
+    this.budgetData = await this.http.get<BudgetDataModel>(this.budgetURL).toPromise();
   }
 
 
   public async generateDataSchema() {
     const budgetData = await this.getBudgetData();
-    budgetData.data.forEach(budget => {
+    this.budgetData.data.forEach(budget => {
       this.chartJSData.datasets[0].data.push(+budget.budget);
       this.chartJSData.datasets[0].backgroundColor.push(`rgba(${Math.ceil(Math.random() * 255)}, ${Math.ceil(Math.random() * 255)}, ${Math.ceil(Math.random() * 255)}, 1)`)
       this.chartJSData.labels.push(budget.title);

@@ -22,6 +22,7 @@ export class HomepageComponent implements OnInit {
     if (this.dataService.d3JSData.length === 0) {
       await this.dataService.generateDataSchema();
     }
+
     this.ctx = this.canvas.nativeElement.getContext('2d')
     await this.createD3Chart()
     await this.createChartJS()
